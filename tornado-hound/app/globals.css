@@ -108,8 +108,7 @@ div img{
   position: absolute;
   top: 10px;
   left: 10px;
+  max-width: 20%;
+  max-height: 20%
 }
 
-#h2{
-  color: gray;
-}

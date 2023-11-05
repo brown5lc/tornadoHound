@@ -6,6 +6,7 @@ import { Console } from "console";
 import { Todo } from "./Todo";
 
 
+
 const App: React.FC = () => {
   const [todo, setTodo] = useState(0)
   const [todos, setTodos] = useState<Todo[]>([])
@@ -21,7 +22,7 @@ console.log(todo)
   return(
     <div className="App">
       <title>Tornado Hound</title>
-      <img src="logo.png" alt="Logo"></img>
+      <img src="/Images/logo.png" alt="Logo"></img>
       <span className="heading">Tornado Hound</span>
       <nav>
       <ul>
@@ -30,9 +31,9 @@ console.log(todo)
         <li><a href="About">About</a></li>
       </ul>
     </nav>
-    <h2> Enter Zipcode Below </h2>
+    <h2> Enter zipcode below: {todo}</h2>
       <Searchbar todo={todo}setTodo={setTodo} handleAdd={handleAdd} />
-
+      <p></p>
     </div>    
   );
 };
