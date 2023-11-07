@@ -4,6 +4,7 @@ import Head from "next/head";
 import React from "react";
 import Link from "next/link";
 import { useState, ChangeEvent } from "react";
+import "../globals.css";
 
 const HistoricalRadarPage = () => {
   const [selectedEvent, setSelectedEvent] = useState("");
@@ -50,14 +51,6 @@ const HistoricalRadarPage = () => {
           <option value="event2">Tornado Event 2 - 2013</option>
           {/* ...more options */}
         </select>
-      </div>
-
-      {/* Tornado Indicator */}
-      <div className="my-4">
-        <p>
-          The selected event contains a tornado:{" "}
-          {/* True or False based on model's prediction */}
-        </p>
       </div>
     </div>
   );

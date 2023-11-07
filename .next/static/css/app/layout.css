@@ -579,7 +579,7 @@ video {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 255, 255, 255);
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
@@ -674,4 +674,53 @@ div img {
   max-width: 10%;
   max-height: 10%;
 }
+
+/*
+#121212 - Dark grey background
+#0D47A1 - Primary bright blue
+#1976D2 - 
+#2196F3 
+#333333
+#EEEEEE 
+#FF5252
+*/
+
+/* Style the select element */
+.my-4 select {
+  background-color: #1976D2; /* Green background */
+  color: white; /* White text color */
+  padding: 8px 32px; /* Some padding */
+  font-size: 16px; /* Size of the font */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer/hand icon */
+  border-radius: 5px; /* Rounded corners */
+  -webkit-appearance: none; /* Removes default styling on iOS */
+  -moz-appearance: none; /* Removes default styling on Firefox */
+  appearance: none; /* Removes default styling */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Box shadow for 3D effect */
+}
+
+/* Style the select element on hover & focus */
+.my-4 select:hover, .my-4 select:focus {
+  background-color: #155ea7; /* Darker green background on hover/focus */
+}
+
+/* Container for the select element to position it correctly */
+.my-4 {
+  position: relative; /* Needed to position the arrow icon */
+  display: inline-block; /* Needed for positioning the arrow icon correctly */
+}
+
+/* Add a caret (arrow down) to the select element */
+.my-4:after {
+  content: '\25BC'; /* Unicode character for "black down-pointing triangle" */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  pointer-events: none; /* Makes sure clicks pass through to the select element */
+  font-size: 12px; /* Smaller triangle size */
+  color: white; /* Match select element text color */
+  transform: translateY(-50%); /* Center the icon vertically */
+}
+
 

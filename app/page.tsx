@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <nav>
         <ul>
           <li>
-            <a href="/home">Home</a>
+            <Link href="./">Home</Link>
             <Link href="../historical-data/">Historical data</Link>
             <Link href="../about/">About</Link>
           </li>
