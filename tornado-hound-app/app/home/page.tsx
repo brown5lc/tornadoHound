@@ -6,7 +6,7 @@ import { Console } from "console";
 import { UserLoc } from "../UserLoc";
 
 const App: React.FC = () => {
-  const [zipInput, setZipInput] = useState(0);
+  const [zipInput, setZipInput] = useState<number | "">("");
   const [userLoc, setUserLoc] = useState<UserLoc[]>([]);
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const App: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <h2> Enter zipcode below: {zipInput}</h2>
+      <h2> Enter zipcode below: </h2>
       <Searchbar
         zipInput={zipInput}
         setZipInput={setZipInput}

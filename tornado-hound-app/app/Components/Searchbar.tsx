@@ -3,8 +3,8 @@ import React from "react";
 import "./styles.css";
 
 interface props {
-  zipInput: number;
-  setZipInput: React.Dispatch<React.SetStateAction<number>>;
+  zipInput: number | "";
+  setZipInput: React.Dispatch<React.SetStateAction<number | "">>;
   handleAdd: (e: React.FormEvent) => void;
 }
 
@@ -14,7 +14,14 @@ const Searchbar = ({ zipInput, setZipInput, handleAdd }: props) => {
       <input
         type="input"
         value={zipInput}
-        onChange={(e) => setZipInput(parseInt(e.target.value, 10))}
+        onChange={(e) => {
+          const value = parseInt(e.target.value, 10);
+          if (isNaN(value)) {
+            setZipInput("");
+          } else {
+            setZipInput(value);
+          }
+        }}
         placeholder="Enter Zip Code"
         className="input__box"
       />
