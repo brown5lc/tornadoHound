@@ -3,9 +3,8 @@ import Link from "next/link";
 
 const About: React.FC = () => {
   return (
-    <div>
+    <div className="App">
       <title>Tornado Hound</title>
-      <h1>About Us</h1>
       <img src="/Images/tornado_hound_logo.svg" alt="Logo"></img>
       <span className="heading">Tornado Hound</span>
       <nav>

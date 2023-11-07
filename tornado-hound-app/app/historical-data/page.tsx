@@ -14,7 +14,7 @@ const HistoricalRadarPage = () => {
   };
 
   return (
-    <>
+    <div className="App">
       <Head>
         <title>Historical Radar Data</title>
         <meta
@@ -59,7 +59,7 @@ const HistoricalRadarPage = () => {
           {/* True or False based on model's prediction */}
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
