@@ -3,21 +3,21 @@ import React, { useState } from "react";
 import Searchbar from "../Components/Searchbar";
 import Link from "next/link";
 import { Console } from "console";
-import { Todo } from "../Todo";
+import { UserLoc } from "../UserLoc";
 
 const App: React.FC = () => {
-  const [todo, setTodo] = useState(0);
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [zipInput, setZipInput] = useState(0);
+  const [userLoc, setUserLoc] = useState<UserLoc[]>([]);
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (todo) {
-      setTodos([...todos, { zip: todo, lat: 1, long: 1 }]);
-      setTodo(todo);
+    if (zipInput) {
+      setUserLoc([...userLoc, { zip: zipInput, lat: 1, long: 1 }]);
+      setZipInput(zipInput);
     }
   };
 
-  console.log(todo);
+  console.log(zipInput);
   return (
     <div className="App">
       <title>Tornado Hound</title>
@@ -32,8 +32,12 @@ const App: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <h2> Enter zipcode below: {todo}</h2>
-      <Searchbar todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      <h2> Enter zipcode below: {zipInput}</h2>
+      <Searchbar
+        zipInput={zipInput}
+        setZipInput={setZipInput}
+        handleAdd={handleAdd}
+      />
     </div>
   );
 };
