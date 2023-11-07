@@ -3,17 +3,17 @@ import React from "react";
 import "./styles.css";
 
 interface props {
-  todo: number;
+  zipInput: number;
   setZipInput: React.Dispatch<React.SetStateAction<number>>;
   handleAdd: (e: React.FormEvent) => void;
 }
 
-const Searchbar = ({ todo, setZipInput, handleAdd }: props) => {
+const Searchbar = ({ zipInput, setZipInput, handleAdd }: props) => {
   return (
     <form className="input" onSubmit={handleAdd}>
       <input
         type="input"
-        value={todo}
+        value={zipInput}
         onChange={(e) => setZipInput(parseInt(e.target.value, 10))}
         placeholder="Enter Zip Code"
         className="input__box"
