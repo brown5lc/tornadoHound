@@ -24,33 +24,33 @@ const HistoricalRadarPage = () => {
         />
       </Head>
 
-      {/* Live Radar Component */}
       <title>Tornado Hound</title>
-      <img src="/Images/tornado_hound_logo.svg" alt="Logo"></img>
-      <span className="heading">Tornado Hound</span>
-      <nav>
-        <ul>
-          <li>
-            <Link href="../">Home</Link>
-            <Link href="/historical-data/">Historical data</Link>
-            <Link href="../about/">About</Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Dropdown Menu */}
-      <div className="my-4">
-        <select
-          onChange={handleSelectEvent}
-          value={selectedEvent}
-          className="p-2 rounded border"
-        >
-          {/* These value attributes would need to correspond to the radar data you want to display */}
-          <option value="">Select a notable tornado event</option>
-          <option value="event1">Tornado Event 1 - 2012</option>
-          <option value="event2">Tornado Event 2 - 2013</option>
-          {/* ...more options */}
-        </select>
+      <div className="flex w-full h-screen">
+        <div className="flex w-1/2 h-1/2 justify-center items-center">
+          <div className="flex flex-col items-center">
+            <div className="w-96 h-48 bg-green-500 rounded-lg"></div>
+            <div className="my-4">
+              <select
+                onChange={handleSelectEvent}
+                value={selectedEvent}
+                className="p-2 rounded border"
+              >
+                <option value="">Select a notable tornado event</option>
+                <option value="event1">Tornado Event 1 - 2012</option>
+                <option value="event2">Tornado Event 2 - 2013</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-1/2 h-1/2 justify-center items-center">
+          <div className="flex flex-col items-center">
+            <img
+              src="/Images/weather-example.png"
+              alt="Radar"
+              className="rounded-lg"
+            ></img>
+          </div>
+        </div>
       </div>
     </div>
   );
