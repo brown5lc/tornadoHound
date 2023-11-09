@@ -13,7 +13,7 @@ const NavBar = () => {
         Home
       </Link>
       <Link href={"/historical-data/"} className="text-xl mt-2 mr-10">
-        Historical Data
+        Historical
       </Link>
       <Link href={"/about/"} className="text-xl mt-2 mr-10">
         About
