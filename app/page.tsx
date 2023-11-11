@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <div className="container mx-auto px-4 mt-64 ml-28 font-bold">
         <div className="text-3xl text-white mb-2">
           <span className="sm:border-b border-stone-500 relative pb-4">
-            Tornado Saftey Tips
+            Tornado Safety Tips
             <ul className="list-disc text-lg font-thin mt-10 ml-5">
               <li>
                 <span className="font-bold">Stay Informed:</span> Keep a
