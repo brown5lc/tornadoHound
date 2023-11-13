@@ -11,7 +11,7 @@ Tornado Hound is a real-time tornado detection web application developed during 
 ## Technology Stack
 - **Front-End:** TypeScript, HTML, CSS, React, and Tailwind CSS.
 - **AI Model:** TensorFlow.js, Keras for model training.
-- **Data Visualization and Collection:** Python (in a separate repository).
+- **Data Visualization and Collection:** Python ([in a separate repository](https://github.com/brown5lc/tornadoScraper)).
 
 ## Installation
 No installation required! Access the live application at [www.tornadohound.tech](http://www.tornadohound.tech).
