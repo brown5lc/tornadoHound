@@ -1,8 +1,23 @@
-// Handle creating a child proccess to run the radar script
-// and return the results to the client
-import { exec } from "child_process";
+// app/radar.ts
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
-export default function handler(req, res) {
+export default function handler(req: NextRequest) {
+  const url = req.nextUrl;
+  const lat = url.searchParams.get("lat");
+  const lon = url.searchParams.get("lon");
+
+  // Perform your logic here
+  // ...
+
+  return NextResponse.json({ message: "Radar data response" });
+}
+
+/*
+import { exec } from "child_process";
+import { NextApiRequest, NextApiResponse } from "next";
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { lat, lon } = req.query;
 
   const scriptPath = "../../python/radar_script.py";
@@ -22,3 +37,4 @@ export default function handler(req, res) {
     res.status(200).send(stdout);
   });
 }
+*/

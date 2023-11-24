@@ -1,7 +1,22 @@
-import React, { useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { UserLoc } from "./UserLoc";
 
 const App: React.FC = () => {
+  const [imageSrc, setImageSrc] = useState<string>("");
+
+  const lat = "41.8781";
+  const lon = "-87.6298";
+
+  useEffect(() => {
+    fetch("/api/")
+      .then((res) => res.blob())
+      .then((blob) => {
+        const imageUrl = URL.createObjectURL(blob);
+        setImageSrc(imageUrl);
+      });
+  }, []);
+
   return (
     <div className="App">
       <title>Tornado Hound</title>
