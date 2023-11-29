@@ -1,11 +1,5 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/about/page": "app/about/page.js",
   "/api/pythonTest/route": "app/api/pythonTest/route.js",
-  "/api/radar/route": "app/api/radar/route.js",
-  "/api/route": "app/api/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/historical-data/page": "app/historical-data/page.js",
-  "/home/page": "app/home/page.js",
   "/page": "app/page.js"
 }

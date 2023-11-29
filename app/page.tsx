@@ -29,7 +29,7 @@ const App: React.FC = () => {
               </li>
               <li>
                 <span className="font-bold">Avoid Windows:</span> Stay away from
-                windows to prevent injurty from broken glass.
+                windows to prevent injury from broken glass.
               </li>
               <li>
                 <span className="font-bold">Protect Your Head:</span> Use
